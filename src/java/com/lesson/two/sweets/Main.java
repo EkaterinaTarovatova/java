@@ -9,7 +9,7 @@ public class Main {
         giftBox.showWeight();
         giftBox.showPrice();
 
-        System.out.println("\nОптимизация по весу (макс. 200 г):");
+        System.out.println("\nОптимизация по весу (макс. вес 200 г):");
         giftBox.optimizeByWeight(200.0);
         giftBox.showAllSweetsInfo();
         giftBox.showWeight();
@@ -17,7 +17,7 @@ public class Main {
 
         giftBox = initializeSweetBox();
 
-        System.out.println("\nОптимизация по цене (макс. 200 р):");
+        System.out.println("\nОптимизация по цене (макс. вес 200 г):");
         giftBox.optimizeByPrice(200.0);
         giftBox.showAllSweetsInfo();
         giftBox.showWeight();

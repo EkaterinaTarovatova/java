@@ -66,13 +66,13 @@ public class GiftBox implements SweetBox {
     }
 
     @Override
-    public void optimizeByPrice(double maxPrice) {
+    public void optimizeByPrice(double maxWeight) {
         sweets.sort(Comparator.comparingDouble(Sweet::getPrice));
 
-        double currentPrice = calculateTotalPrice();
-        while (currentPrice >= maxPrice && !sweets.isEmpty()) {
+        double currentWeight = calculateTotalWeight();
+        while (currentWeight >= maxWeight && !sweets.isEmpty()) {
             sweets.removeFirst();
-            currentPrice = calculateTotalPrice();
+            currentWeight = calculateTotalWeight();
         }
     }
 

@@ -8,5 +8,5 @@ public interface SweetBox {
     void showPrice();
     void showAllSweetsInfo();
     void optimizeByWeight(double maxWeight);
-    void optimizeByPrice(double maxPrice);
+    void optimizeByPrice(double maxWeight);
 }
