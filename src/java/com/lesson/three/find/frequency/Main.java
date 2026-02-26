@@ -7,14 +7,17 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        String filePath = "HW.txt";
+        String filePath = "file_l3.txt";
         List<String> allWords = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String cleanLine = line.replaceAll("[^a-zA-Zа-яА-Я]", " ");
-                String[] words = cleanLine.toLowerCase().split("\\s+");
-                allWords.addAll(List.of(words));
+                String cleanLine = line.replaceAll("[^a-zA-Zа-яА-Я]", " ").trim();
+                if (!cleanLine.isEmpty()) {
+                    String[] words = cleanLine.toLowerCase().split("\\s+");
+                    allWords.addAll(List.of(words));
+                }
+
             }
         } catch (IOException e) {
             System.out.println("Ошибка чтения файла: " + e.getMessage());
