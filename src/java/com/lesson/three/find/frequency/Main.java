@@ -44,7 +44,12 @@ public class Main {
         System.out.println("Все слова в алфавитном порядке: " + allWords);
         System.out.println("\nЧастота слов:");
         for (String word : sortedWords) {
-            System.out.println(word + " — " + frequency.get(word));
+            int count = frequency.get(word);
+            System.out.printf("%s — %d (%.2f%%)%n",
+                    word,
+                    count,
+                    (double) count * 100 / allWords.size()
+            );
         }
         System.out.println("\nСлова с максимальной частотой: ");
         for (String word : maxFrequencyWords) {
